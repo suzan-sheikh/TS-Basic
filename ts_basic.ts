@@ -14,3 +14,35 @@ let Myname: string = "suzan";
 let age: number = 1235;
 let isActive: boolean = true;
 
+//* 🧠 Non-Primitive Type কি?
+// Non-Primitive Type হলো এমন ডাটা টাইপ যেগুলো একাধিক ভ্যালু (multiple values) বা complex structure ধরে রাখতে পারে। like:
+/*
+1.  object.
+2.  array.
+3.  function.
+4.  custom type (interface/type)
+*/
+// object
+type TUser {
+    name: string;
+    age: number
+}
+
+let user: TUser  = {
+    name: "suzan",
+    age: 30;
+}
+// array 
+let newArray: (string | number)[] = ["md", "suzan", "sheik", 125];
+
+//* object, literal & optional type
+
+// object
+
+let developer: {name: string, age: number} = {
+    name: "suzan",
+    age: 30,
+}
+
+
+
