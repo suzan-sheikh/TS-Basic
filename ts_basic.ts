@@ -118,8 +118,13 @@ type TAdmin = {
 
 type TNandAUser = TNormalUser & TAdmin;
 
-let userData: TNandAUser = {
-    name: "suzan",
-    userId: 1254,
+type TNOrAUser = TNormalUser | TAdmin;
 
-}
+let TNandAUser: TNOrAUser = {
+  name: "suzan",
+  userId: 1254,
+};
+let userOrData: TNOrAUser = {
+  name: "suzan",
+  userId: 1254,
+};
