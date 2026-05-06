@@ -107,4 +107,19 @@ let oneObject: TAlias = {
   myAge: 20,
 };
 
-//* 
+//* Union and intersection
+
+type TNormalUser = {
+  name: string;
+};
+type TAdmin = {
+  userId: number;
+};
+
+type TNandAUser = TNormalUser & TAdmin;
+
+let userData: TNandAUser = {
+    name: "suzan",
+    userId: 1254,
+
+}
