@@ -45,4 +45,23 @@ let developer: {name: string, age: number} = {
 }
 
 
+//* 🧱 2. Literal Type ✅ কি?
+// Literal type মানে হলো — exact নির্দিষ্ট value।
 
+let access: "success" | "error";
+access = "error"; // 👉 এখানে: শুধু "success" বা "error" allowed
+
+type TLiteralValue = {
+    name: string,
+    role: "user" | "admin", //* user | admin fix value this is literal value
+    age?: number; //* optional 
+}
+
+let literalValue: TLiteralValue = {
+    name: "suzan",
+    role: "admin", 
+}
+
+function newFunc(num: number, num2: number){
+    return num + num2
+}
