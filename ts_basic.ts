@@ -129,12 +129,20 @@ let userOrData: TNOrAUser = {
   userId: 1254,
 };
 
-//* Ternary
+//* Ternary, nullish coalescing and optional operator
 
-let arrowFun = (
-  number1: number | string,
-  number2: number | string,
-): number | string =>
-  typeof number1 === "number" && typeof number2 === "number"
-    ? number1 + number2
-    : "please provide a number";
+// ternary
+// let arrowFun = (
+//   number1: number | string,
+//   number2: number | string,
+// ): number | string =>
+//   typeof number1 === "number" && typeof number2 === "number"
+//     ? number1 + number2
+//     : "please provide a number";
+
+// nullish coalescing operator
+let arrowFun = (number1: number | string, number2: number | string) => {
+  let num1 = Number(number1 ?? 1);
+  let num2 = Number(number2 ?? 1);
+  return !isNaN(num1) && !isNaN(num2) ? num1 + num2 : "return korce string";
+};
