@@ -128,3 +128,13 @@ let userOrData: TNOrAUser = {
   name: "suzan",
   userId: 1254,
 };
+
+//* Ternary
+
+let arrowFun = (
+  number1: number | string,
+  number2: number | string,
+): number | string =>
+  typeof number1 === "number" && typeof number2 === "number"
+    ? number1 + number2
+    : "please provide a number";
