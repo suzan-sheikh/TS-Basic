@@ -23,27 +23,26 @@ let isActive: boolean = true;
 4.  custom type (interface/type)
 */
 // object
-type TUser {
-    name: string;
-    age: number
-}
+type TUser = {
+  name: string;
+  age: number;
+};
 
-let user: TUser  = {
-    name: "suzan",
-    age: 30;
-}
-// array 
+let user: TUser = {
+  name: "suzan",
+  age: 30,
+};
+// array
 let newArray: (string | number)[] = ["md", "suzan", "sheik", 125];
 
 //* object, literal & optional type
 
 // object
 
-let developer: {name: string, age: number} = {
-    name: "suzan",
-    age: 30,
-}
-
+let developer: { name: string; age: number } = {
+  name: "suzan",
+  age: 30,
+};
 
 //* 🧱 2. Literal Type ✅ কি?
 // Literal type মানে হলো — exact নির্দিষ্ট value।
@@ -52,17 +51,60 @@ let access: "success" | "error";
 access = "error"; // 👉 এখানে: শুধু "success" বা "error" allowed
 
 type TLiteralValue = {
-    name: string,
-    role: "user" | "admin", //* user | admin fix value this is literal value
-    age?: number; //* optional 
-}
+  name: string;
+  role: "user" | "admin"; //* user | admin fix value this is literal value
+  age?: number; //* optional
+};
 
 let literalValue: TLiteralValue = {
-    name: "suzan",
-    role: "admin", 
+  name: "suzan",
+  role: "admin",
+};
+
+function calculate(num: number, num2: number): number {
+  return num * num2;
+}
+calculate(10, 10);
+
+//* spread Operator
+
+let SchoolFriend = ["abdullah", "sorif"];
+let collageFriend = ["tusher", "raju"];
+
+SchoolFriend.push(...collageFriend);
+
+//* Rest Operator
+
+function sum(...numbers: number[]) {
+  return numbers.reduce((a, b) => a + b, 0);
 }
 
-function calculate(num: number, num2: number): number{
-    return num * num2
-}
-calculate(10, 10)
+sum(1, 2, 3, 4); // 10
+
+//* Destructuring
+
+type TMyBoject = {
+  bojectName: string;
+  myAge: number;
+};
+
+let myBoject: TMyBoject = {
+  bojectName: "suzan",
+  myAge: 20,
+};
+
+let { myAge } = myBoject;
+
+//* Type Alias
+
+type TAlias = {
+  objectName: string;
+  myAge: number;
+};
+
+let oneObject: TAlias = {
+  objectName: "suzan",
+  myAge: 20,
+};
+
+//* 
