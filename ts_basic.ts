@@ -62,6 +62,7 @@ let literalValue: TLiteralValue = {
     role: "admin", 
 }
 
-function newFunc(num: number, num2: number){
-    return num + num2
+function calculate(num: number, num2: number): number{
+    return num * num2
 }
+calculate(10, 10)
